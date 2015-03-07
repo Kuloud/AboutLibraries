@@ -1,4 +1,4 @@
-package com.mikepenz.aboutlibraries.entity;
+package com.kuloud.android.aboutlibraries.entity;
 
 public class Library implements Comparable<Library> {
 

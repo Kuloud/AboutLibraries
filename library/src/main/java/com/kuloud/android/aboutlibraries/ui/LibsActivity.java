@@ -1,4 +1,4 @@
-package com.mikepenz.aboutlibraries.ui;
+package com.kuloud.android.aboutlibraries.ui;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -9,9 +9,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
 import android.view.MenuItem;
 
-import com.mikepenz.aboutlibraries.Libs;
-import com.mikepenz.aboutlibraries.R;
-import com.mikepenz.aboutlibraries.util.Colors;
+import com.kuloud.android.aboutlibraries.Libs;
+import com.kuloud.android.aboutlibraries.R;
+import com.kuloud.android.aboutlibraries.util.Colors;
 
 /**
  * Created by mikepenz on 04.06.14.

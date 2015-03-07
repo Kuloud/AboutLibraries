@@ -1,4 +1,4 @@
-package com.mikepenz.aboutlibraries;
+package com.kuloud.android.aboutlibraries;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,14 +7,15 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.mikepenz.aboutlibraries.detector.Detect;
-import com.mikepenz.aboutlibraries.entity.Library;
-import com.mikepenz.aboutlibraries.entity.License;
-import com.mikepenz.aboutlibraries.ui.LibsActivity;
-import com.mikepenz.aboutlibraries.ui.LibsFragment;
-import com.mikepenz.aboutlibraries.ui.adapter.LibsRecyclerViewAdapter;
-import com.mikepenz.aboutlibraries.util.Colors;
-import com.mikepenz.aboutlibraries.util.Util;
+import com.kuloud.android.aboutlibraries.detector.Detect;
+import com.kuloud.android.aboutlibraries.entity.Library;
+import com.kuloud.android.aboutlibraries.entity.License;
+import com.kuloud.android.aboutlibraries.ui.LibsActivity;
+import com.kuloud.android.aboutlibraries.ui.LibsFragment;
+import com.kuloud.android.aboutlibraries.ui.adapter.LibsRecyclerViewAdapter;
+import com.kuloud.android.aboutlibraries.util.Colors;
+import com.kuloud.android.aboutlibraries.util.Util;
+import com.kuloud.android.aboutlibraries.R;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

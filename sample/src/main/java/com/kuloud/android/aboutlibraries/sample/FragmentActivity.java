@@ -1,4 +1,4 @@
-package com.mikepenz.aboutlibraries.sample;
+package com.kuloud.android.aboutlibraries.sample;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -8,8 +8,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.mikepenz.aboutlibraries.Libs;
-import com.mikepenz.aboutlibraries.ui.LibsFragment;
+import com.kuloud.android.aboutlibraries.Libs;
+import com.kuloud.android.aboutlibraries.ui.LibsFragment;
+import com.kuloud.android.aboutlibraries.sample.R;
 
 /**
  * Created by mikepenz on 04.06.14.
@@ -57,7 +58,7 @@ public class FragmentActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(com.mikepenz.aboutlibraries.sample.R.menu.fragment, menu);
+        getMenuInflater().inflate(com.kuloud.android.aboutlibraries.sample.R.menu.fragment, menu);
         return true;
     }
 
@@ -67,17 +68,17 @@ public class FragmentActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == com.mikepenz.aboutlibraries.sample.R.id.action_opensource) {
+        if (id == com.kuloud.android.aboutlibraries.sample.R.id.action_opensource) {
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/mikepenz/AboutLibraries"));
             startActivity(browserIntent);
             return true;
-        } else if (id == com.mikepenz.aboutlibraries.sample.R.id.action_extendactivity) {
+        } else if (id == com.kuloud.android.aboutlibraries.sample.R.id.action_extendactivity) {
             Intent i = new Intent(getApplicationContext(), ExtendActivity.class);
             startActivity(i);
-        } else if (id == com.mikepenz.aboutlibraries.sample.R.id.action_customactivity) {
+        } else if (id == com.kuloud.android.aboutlibraries.sample.R.id.action_customactivity) {
             Intent i = new Intent(getApplicationContext(), CustomActivity.class);
             startActivity(i);
-        } else if (id == com.mikepenz.aboutlibraries.sample.R.id.action_manifestactivity) {
+        } else if (id == com.kuloud.android.aboutlibraries.sample.R.id.action_manifestactivity) {
             new Libs.Builder()
                     .withFields(R.string.class.getFields())
                     .withLibraries("crouton, actionbarsherlock", "showcaseview")

@@ -10,8 +10,8 @@ android {
     compileSdkVersion 21
     buildToolsVersion '21.1.2'
     defaultConfig {
-        applicationId 'com.mikepenz.aboutlibraries.sample'
-        minSdkVersion 11
+        applicationId 'com.kuloud.android.aboutlibraries.sample'
+        minSdkVersion 14
         targetSdkVersion 21
         versionCode 458
         versionName '4.5.8'

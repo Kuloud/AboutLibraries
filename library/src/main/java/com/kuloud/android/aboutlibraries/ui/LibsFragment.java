@@ -1,4 +1,4 @@
-package com.mikepenz.aboutlibraries.ui;
+package com.kuloud.android.aboutlibraries.ui;
 
 import android.app.Activity;
 import android.content.pm.ApplicationInfo;
@@ -18,10 +18,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 
-import com.mikepenz.aboutlibraries.Libs;
-import com.mikepenz.aboutlibraries.R;
-import com.mikepenz.aboutlibraries.entity.Library;
-import com.mikepenz.aboutlibraries.ui.adapter.LibsRecyclerViewAdapter;
+import com.kuloud.android.aboutlibraries.Libs;
+import com.kuloud.android.aboutlibraries.R;
+import com.kuloud.android.aboutlibraries.entity.Library;
+import com.kuloud.android.aboutlibraries.ui.adapter.LibsRecyclerViewAdapter;
 
 import java.util.ArrayList;
 import java.util.Collections;

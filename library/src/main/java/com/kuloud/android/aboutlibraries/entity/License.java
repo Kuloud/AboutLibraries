@@ -1,4 +1,4 @@
-package com.mikepenz.aboutlibraries.entity;
+package com.kuloud.android.aboutlibraries.entity;
 
 /**
  * Created by mikepenz on 08.06.14.

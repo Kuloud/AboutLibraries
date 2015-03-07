@@ -1,10 +1,10 @@
-package com.mikepenz.aboutlibraries.detector;
+package com.kuloud.android.aboutlibraries.detector;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.text.TextUtils;
 
-import com.mikepenz.aboutlibraries.entity.Library;
+import com.kuloud.android.aboutlibraries.entity.Library;
 
 import java.util.ArrayList;
 import java.util.List;

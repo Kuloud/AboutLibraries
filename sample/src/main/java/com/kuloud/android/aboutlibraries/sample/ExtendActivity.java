@@ -1,9 +1,10 @@
-package com.mikepenz.aboutlibraries.sample;
+package com.kuloud.android.aboutlibraries.sample;
 
 import android.os.Bundle;
 
-import com.mikepenz.aboutlibraries.Libs;
-import com.mikepenz.aboutlibraries.ui.LibsActivity;
+import com.kuloud.android.aboutlibraries.Libs;
+import com.kuloud.android.aboutlibraries.ui.LibsActivity;
+import com.kuloud.android.aboutlibraries.sample.R;
 
 
 public class ExtendActivity extends LibsActivity {

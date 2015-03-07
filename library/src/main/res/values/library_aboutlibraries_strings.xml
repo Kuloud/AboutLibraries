@@ -2,8 +2,8 @@
 <resources>
 
     <string name="define_AboutLibraries">year;owner</string>
-    <string name="library_AboutLibraries_author">Mike Penz</string>
-    <string name="library_AboutLibraries_authorWebsite">http://mikepenz.com/</string>
+    <string name="library_AboutLibraries_author">Kuloud</string>
+    <string name="library_AboutLibraries_authorWebsite">http://kuloud.com/</string>
     <string name="library_AboutLibraries_libraryName">AboutLibraries</string>
     <string name="library_AboutLibraries_libraryDescription">
         <![CDATA[
@@ -12,12 +12,12 @@
         Most modern apps feature an "Used Library"-Section and for this some information of those libs is required. As it gets annoying to copy those strings always to your app I have developed this small helper library to provide the required information.
         ]]>
     </string>
-    <string name="library_AboutLibraries_libraryVersion">4.5.8</string>
-    <string name="library_AboutLibraries_libraryWebsite">https://github.com/mikepenz/AboutLibraries</string>
+    <string name="library_AboutLibraries_libraryVersion">1.0.0</string>
+    <string name="library_AboutLibraries_libraryWebsite">https://github.com/kuloud/AboutLibraries</string>
     <string name="library_AboutLibraries_licenseId">apache_2_0</string>
     <string name="library_AboutLibraries_isOpenSource">true</string>
-    <string name="library_AboutLibraries_repositoryLink">https://github.com/mikepenz/AboutLibraries</string>
+    <string name="library_AboutLibraries_repositoryLink">https://github.com/kuloud/AboutLibraries</string>
     <!-- Custom variables section -->
-    <string name="library_AboutLibraries_owner">Mike Penz</string>
-    <string name="library_AboutLibraries_year">2014</string>
+    <string name="library_AboutLibraries_owner">Kuloud</string>
+    <string name="library_AboutLibraries_year">2015</string>
 </resources>

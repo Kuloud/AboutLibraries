@@ -1,4 +1,4 @@
-package com.mikepenz.aboutlibraries.ui.adapter;
+package com.kuloud.android.aboutlibraries.ui.adapter;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -15,9 +15,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.mikepenz.aboutlibraries.R;
-import com.mikepenz.aboutlibraries.entity.Library;
-import com.mikepenz.aboutlibraries.util.MovementCheck;
+import com.kuloud.android.aboutlibraries.entity.Library;
+import com.kuloud.android.aboutlibraries.util.MovementCheck;
+import com.kuloud.android.aboutlibraries.R;
 
 import java.util.LinkedList;
 import java.util.List;

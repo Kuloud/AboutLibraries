@@ -1,4 +1,4 @@
-package com.mikepenz.aboutlibraries.sample;
+package com.kuloud.android.aboutlibraries.sample;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -9,9 +9,10 @@ import android.widget.EditText;
 
 import com.fima.cardsui.objects.CardStack;
 import com.fima.cardsui.views.CardUI;
-import com.mikepenz.aboutlibraries.Libs;
-import com.mikepenz.aboutlibraries.entity.Library;
-import com.mikepenz.aboutlibraries.sample.cardsui.LibraryCard;
+import com.kuloud.android.aboutlibraries.Libs;
+import com.kuloud.android.aboutlibraries.entity.Library;
+import com.kuloud.android.aboutlibraries.sample.R;
+import com.kuloud.android.aboutlibraries.sample.cardsui.LibraryCard;
 
 import java.util.List;
 

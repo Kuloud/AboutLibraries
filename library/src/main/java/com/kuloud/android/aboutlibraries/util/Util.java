@@ -1,4 +1,4 @@
-package com.mikepenz.aboutlibraries.util;
+package com.kuloud.android.aboutlibraries.util;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
