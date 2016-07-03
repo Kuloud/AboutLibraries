@@ -10,7 +10,6 @@ import android.view.MenuItem;
 
 import com.kuloud.android.aboutlibraries.Libs;
 import com.kuloud.android.aboutlibraries.ui.LibsFragment;
-import com.kuloud.android.aboutlibraries.sample.R;
 
 /**
  * Created by mikepenz on 04.06.14.
@@ -23,28 +22,11 @@ public class FragmentActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_opensource);
 
-        /*
-        Bundle bundle = new Bundle();
-        bundle.putStringArray(Libs.BUNDLE_FIELDS, Libs.toStringArray(R.string.class.getFields()));
-        bundle.putStringArray(Libs.BUNDLE_LIBS, new String[]{"crouton", "activeandroid", "actionbarsherlock", "showcaseview"});
-
-        bundle.putBoolean(Libs.BUNDLE_VERSION, true);
-        bundle.putBoolean(Libs.BUNDLE_LICENSE, true);
-
-        //NOTE: This is how you can modify a specific library definition during runtime
-        HashMap<String, HashMap<String, String>> libsModification = new HashMap<String, HashMap<String, String>>();
-        HashMap<String, String> modifyAboutLibraries = new HashMap<String, String>();
-        modifyAboutLibraries.put("name", "_AboutLibraries");
-        libsModification.put("aboutlibraries", modifyAboutLibraries);
-        bundle.putSerializable(Libs.BUNDLE_LIBS_MODIFICATION, libsModification);
-
-        LibsFragment fragment = new LibsFragment();
-        fragment.setArguments(bundle);
-        */
-
         LibsFragment fragment = new Libs.Builder()
                 .withFields(R.string.class.getFields())
-                .withLibraries("crouton", "activeandroid", "actionbarsherlock", "showcaseview")
+                .withAboutIconShown(true)
+                .withAboutVersionShown(true)
+                .withAutoDetect(true)
                 .withVersionShown(true)
                 .withLicenseShown(true)
                 .withLibraryModification("aboutlibraries", Libs.LibraryFields.LIBRARY_NAME, "_AboutLibraries")

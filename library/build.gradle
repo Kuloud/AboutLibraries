@@ -1,13 +1,15 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
 android {
-    compileSdkVersion 22
+    compileSdkVersion 24
     buildToolsVersion '22.0.1'
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 22
+        targetSdkVersion 24
         versionCode 1
-        versionName '1.0.0-SNAPSHOT'
+        versionName '1.0.0.001'
     }
 
     buildTypes {
@@ -25,8 +27,21 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:22.1.1'
-    compile 'com.android.support:appcompat-v7:22.1.1'
-    compile 'com.android.support:cardview-v7:22.1.1'
-    compile 'com.android.support:recyclerview-v7:22.1.1'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:cardview-v7:24.0.0'
+    compile 'com.android.support:recyclerview-v7:24.0.0'
+    compile 'com.kuloud.android:essential:1.0.0.003'
+}
+
+publish {
+    userOrg = 'kuloud'
+    groupId = 'com.kuloud.android'
+    artifactId = "about"
+    publishVersion = '1.0.0.001'
+    description = 'AboutLibraries is a library to offer some information of libraries, porting from http://mikepenz.github.io/AboutLibraries'
+    website = 'https://github.com/Kuloud/AboutLibraries'
+    bintrayUser = property('bintrayUser')
+    bintrayKey = property('bintrayApiKey')
+    dryRun = false
+    licences = ['Apache-2.0']
 }

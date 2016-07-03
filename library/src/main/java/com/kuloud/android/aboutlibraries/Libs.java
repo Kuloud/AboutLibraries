@@ -15,7 +15,6 @@ import com.kuloud.android.aboutlibraries.ui.LibsFragment;
 import com.kuloud.android.aboutlibraries.ui.adapter.LibsRecyclerViewAdapter;
 import com.kuloud.android.aboutlibraries.util.Colors;
 import com.kuloud.android.aboutlibraries.util.Util;
-import com.kuloud.android.aboutlibraries.R;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -25,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Libs {
-    public static enum LibraryFields {
+    public enum LibraryFields {
         AUTHOR_NAME,
         AUTHOR_WEBSITE,
         LIBRARY_NAME,
@@ -146,7 +145,9 @@ public class Libs {
     /**
      * A helper method to get a String[] out of a fieldArray
      *
-     * @param fields R.strings.class.getFields()
+     * @param fields
+     *         R.strings.class.getFields()
+     *
      * @return a String[] with the string ids we need
      */
     public static String[] toStringArray(Field[] fields) {
@@ -162,10 +163,15 @@ public class Libs {
     /**
      * This will summarize all libraries and elimate duplicates
      *
-     * @param internalLibraries the String[] with the internalLibraries (if set manual)
-     * @param excludeLibraries  the String[] with the libs to be excluded
-     * @param autoDetect        defines if the libraries should be resolved by their classpath (if possible)
-     * @param sort              defines if the array should be sorted
+     * @param internalLibraries
+     *         the String[] with the internalLibraries (if set manual)
+     * @param excludeLibraries
+     *         the String[] with the libs to be excluded
+     * @param autoDetect
+     *         defines if the libraries should be resolved by their classpath (if possible)
+     * @param sort
+     *         defines if the array should be sorted
+     *
      * @return the summarized list of included Libraries
      */
     public ArrayList<Library> prepareLibraries(String[] internalLibraries, String[] excludeLibraries, boolean autoDetect, boolean sort) {
@@ -271,7 +277,7 @@ public class Libs {
      * @return an ArrayList Library  with all available externLibraries
      */
     public ArrayList<Library> getExternLibraries() {
-        return new ArrayList<Library>(externLibraries);
+        return new ArrayList<>(externLibraries);
     }
 
     /**
@@ -298,7 +304,10 @@ public class Libs {
     /**
      * Get a library by its name (the name must be equal)
      *
-     * @param libraryName the name of the lib (NOT case sensitiv) or the real name of the lib (this is the name used for github)
+     * @param libraryName
+     *         the name of the lib (NOT case sensitiv) or the real name of the lib (this is the name
+     *         used for github)
+     *
      * @return the found library or null
      */
     public Library getLibrary(String libraryName) {
@@ -315,8 +324,12 @@ public class Libs {
     /**
      * Find a library by a searchTerm (Limit the results if there are more than one)
      *
-     * @param searchTerm the term which is in the libs name (NOT case sensitiv) or the real name of the lib (this is the name used for github)
-     * @param limit      -1 for all results or smaller 0 for a limitted result
+     * @param searchTerm
+     *         the term which is in the libs name (NOT case sensitiv) or the real name of the lib
+     *         (this is the name used for github)
+     * @param limit
+     *         -1 for all results or smaller 0 for a limitted result
+     *
      * @return an ArrayList Library with the found internLibraries
      */
     public ArrayList<Library> findLibrary(String searchTerm, int limit) {
@@ -327,6 +340,7 @@ public class Libs {
      * @param searchTerm
      * @param idOnly
      * @param limit
+     *
      * @return
      */
     public ArrayList<Library> findInInternalLibrary(String searchTerm, boolean idOnly, int limit) {
@@ -337,6 +351,7 @@ public class Libs {
      * @param searchTerm
      * @param idOnly
      * @param limit
+     *
      * @return
      */
     public ArrayList<Library> findInExternalLibrary(String searchTerm, boolean idOnly, int limit) {
@@ -348,6 +363,7 @@ public class Libs {
      * @param searchTerm
      * @param idOnly
      * @param limit
+     *
      * @return
      */
     private ArrayList<Library> find(ArrayList<Library> libraries, String searchTerm, boolean idOnly, int limit) {
@@ -382,6 +398,7 @@ public class Libs {
 
     /**
      * @param licenseName
+     *
      * @return
      */
     public License getLicense(String licenseName) {
@@ -397,6 +414,7 @@ public class Libs {
 
     /**
      * @param licenseName
+     *
      * @return
      */
     private License genLicense(String licenseName) {
@@ -418,6 +436,7 @@ public class Libs {
 
     /**
      * @param libraryName
+     *
      * @return
      */
     private Library genLibrary(String libraryName) {
@@ -472,6 +491,7 @@ public class Libs {
 
     /**
      * @param libraryName
+     *
      * @return
      */
     public HashMap<String, String> getCustomVariables(String libraryName) {
@@ -624,9 +644,12 @@ public class Libs {
         }
 
         /**
-         * Builder method to pass the R.string.class.getFields() array to the fragment/activity so we can also include all ressources which are within libraries or your app.
+         * Builder method to pass the R.string.class.getFields() array to the fragment/activity so
+         * we can also include all ressources which are within libraries or your app.
          *
-         * @param fields R.string.class.getFields()
+         * @param fields
+         *         R.string.class.getFields()
+         *
          * @return this
          */
         public Builder withFields(Field[] fields) {
@@ -634,9 +657,13 @@ public class Libs {
         }
 
         /**
-         * Builder method to pass the Libs.toStringArray(R.string.class.getFields()) array to the fragment/activity so we can also include all ressources which are within libraries or your app.
+         * Builder method to pass the Libs.toStringArray(R.string.class.getFields()) array to the
+         * fragment/activity so we can also include all ressources which are within libraries or
+         * your app.
          *
-         * @param fields Libs.toStringArray(R.string.class.getFields())
+         * @param fields
+         *         Libs.toStringArray(R.string.class.getFields())
+         *
          * @return this
          */
         public Builder withFields(String... fields) {
@@ -647,7 +674,9 @@ public class Libs {
         /**
          * Builder method to pass manual libraries (libs which are not autoDetected)
          *
-         * @param libraries the identifiers of the manual added libraries
+         * @param libraries
+         *         the identifiers of the manual added libraries
+         *
          * @return this
          */
         public Builder withLibraries(String... libraries) {
@@ -658,7 +687,9 @@ public class Libs {
         /**
          * Builder method to exclude specific libraries
          *
-         * @param excludeLibraries the identifiers of the libraries which should be excluded
+         * @param excludeLibraries
+         *         the identifiers of the libraries which should be excluded
+         *
          * @return this
          */
         public Builder withExcludedLibraries(String... excludeLibraries) {
@@ -669,7 +700,9 @@ public class Libs {
         /**
          * Builder method to disable autoDetect (default: enabled)
          *
-         * @param autoDetect enabled or disabled
+         * @param autoDetect
+         *         enabled or disabled
+         *
          * @return this
          */
         public Builder withAutoDetect(boolean autoDetect) {
@@ -680,7 +713,9 @@ public class Libs {
         /**
          * Builder method to disable sort (default: enabled)
          *
-         * @param sort enabled or disabled
+         * @param sort
+         *         enabled or disabled
+         *
          * @return this
          */
         public Builder withSortEnabled(boolean sort) {
@@ -691,7 +726,9 @@ public class Libs {
         /**
          * Builder method to disable animations (default: enabled)
          *
-         * @param animate enabled or disabled
+         * @param animate
+         *         enabled or disabled
+         *
          * @return this
          */
         public Builder withAnimations(boolean animate) {
@@ -702,7 +739,9 @@ public class Libs {
         /**
          * Builder method to enable the license display (default: disabled)
          *
-         * @param showLicense enabled or disabled
+         * @param showLicense
+         *         enabled or disabled
+         *
          * @return this
          */
         public Builder withLicenseShown(boolean showLicense) {
@@ -713,7 +752,9 @@ public class Libs {
         /**
          * Builder method to disable the license display as dialog (default: enabled)
          *
-         * @param showLicenseDialog enabled or disabled
+         * @param showLicenseDialog
+         *         enabled or disabled
+         *
          * @return this
          */
         public Builder withLicenseDialog(boolean showLicenseDialog) {
@@ -724,7 +765,9 @@ public class Libs {
         /**
          * Builder method to hide the version number (default: enabled)
          *
-         * @param showVersion enabled or disabled
+         * @param showVersion
+         *         enabled or disabled
+         *
          * @return this
          */
         public Builder withVersionShown(boolean showVersion) {
@@ -735,7 +778,9 @@ public class Libs {
         /**
          * Builder method to enable the display of the application icon as about this app view
          *
-         * @param aboutShowIcon enabled or disabled
+         * @param aboutShowIcon
+         *         enabled or disabled
+         *
          * @return this
          */
         public Builder withAboutIconShown(boolean aboutShowIcon) {
@@ -744,9 +789,12 @@ public class Libs {
         }
 
         /**
-         * Builder method to enable the display of the application version name and code as about this app view
+         * Builder method to enable the display of the application version name and code as about
+         * this app view
          *
-         * @param aboutShowVersion enabled or disabled
+         * @param aboutShowVersion
+         *         enabled or disabled
+         *
          * @return this
          */
         public Builder withAboutVersionShown(boolean aboutShowVersion) {
@@ -757,9 +805,11 @@ public class Libs {
         }
 
         /**
-         * Builder method to enable the display of the application version name as about this app view
+         * Builder method to enable the display of the application version name as about this app
+         * view
          *
          * @param aboutShowVersion
+         *
          * @return
          */
         public Builder withAboutVersionShownName(boolean aboutShowVersion) {
@@ -768,9 +818,11 @@ public class Libs {
         }
 
         /**
-         * Builder method to enable the display of the application version code as about this app view
+         * Builder method to enable the display of the application version code as about this app
+         * view
          *
          * @param aboutShowVersion
+         *
          * @return this
          */
         public Builder withAboutVersionShownCode(boolean aboutShowVersion) {
@@ -779,9 +831,12 @@ public class Libs {
         }
 
         /**
-         * Builder method to enable the display and set the text of the application name in the about this app view
+         * Builder method to enable the display and set the text of the application name in the
+         * about this app view
          *
-         * @param aboutAppName the name of this application
+         * @param aboutAppName
+         *         the name of this application
+         *
          * @return this
          */
         public Builder withAboutAppName(String aboutAppName) {
@@ -790,9 +845,12 @@ public class Libs {
         }
 
         /**
-         * Builder method to enable the display and set the text of the application description as about this app view
+         * Builder method to enable the display and set the text of the application description as
+         * about this app view
          *
-         * @param aboutDescription the description of this application
+         * @param aboutDescription
+         *         the description of this application
+         *
          * @return this
          */
         public Builder withAboutDescription(String aboutDescription) {
@@ -801,7 +859,9 @@ public class Libs {
         }
 
         /**
-         * @param aboutAppSpecial1 the special button text
+         * @param aboutAppSpecial1
+         *         the special button text
+         *
          * @return this
          */
         public Builder withAboutSpecial1(String aboutAppSpecial1) {
@@ -810,7 +870,9 @@ public class Libs {
         }
 
         /**
-         * @param aboutAppSpecial1Description the special dialog text
+         * @param aboutAppSpecial1Description
+         *         the special dialog text
+         *
          * @return this
          */
         public Builder withAboutSpecial1Description(String aboutAppSpecial1Description) {
@@ -819,7 +881,9 @@ public class Libs {
         }
 
         /**
-         * @param aboutAppSpecial2 the special button text
+         * @param aboutAppSpecial2
+         *         the special button text
+         *
          * @return this
          */
         public Builder withAboutSpecial2(String aboutAppSpecial2) {
@@ -828,7 +892,9 @@ public class Libs {
         }
 
         /**
-         * @param aboutAppSpecial2Description the special dialog text
+         * @param aboutAppSpecial2Description
+         *         the special dialog text
+         *
          * @return this
          */
         public Builder withAboutSpecial2Description(String aboutAppSpecial2Description) {
@@ -837,7 +903,9 @@ public class Libs {
         }
 
         /**
-         * @param aboutAppSpecial3 the special button text
+         * @param aboutAppSpecial3
+         *         the special button text
+         *
          * @return this
          */
         public Builder withAboutSpecial3(String aboutAppSpecial3) {
@@ -846,7 +914,9 @@ public class Libs {
         }
 
         /**
-         * @param aboutAppSpecial3Description the special dialog text
+         * @param aboutAppSpecial3Description
+         *         the special dialog text
+         *
          * @return this
          */
         public Builder withAboutSpecial3Description(String aboutAppSpecial3Description) {
@@ -857,7 +927,9 @@ public class Libs {
         /**
          * Builder method to set the activity theme
          *
-         * @param activityTheme as example R.theme.AppTheme (just for the activity)
+         * @param activityTheme
+         *         as example R.theme.AppTheme (just for the activity)
+         *
          * @return this
          */
         public Builder withActivityTheme(int activityTheme) {
@@ -868,7 +940,9 @@ public class Libs {
         /**
          * Builder method to set the ActivityTitle
          *
-         * @param activityTitle the activity title (just for the activity)
+         * @param activityTitle
+         *         the activity title (just for the activity)
+         *
          * @return this
          */
         public Builder withActivityTitle(String activityTitle) {
@@ -879,7 +953,9 @@ public class Libs {
         /**
          * Builder method to set the ActivityColor
          *
-         * @param activityColor the activity color (just for the activity)
+         * @param activityColor
+         *         the activity color (just for the activity)
+         *
          * @return this
          */
         public Builder withActivityColor(Colors activityColor) {
@@ -888,9 +964,13 @@ public class Libs {
         }
 
         /**
-         * Builder method to modify specific libraries. NOTE: This will overwrite any modifications with the helper methods
+         * Builder method to modify specific libraries. NOTE: This will overwrite any modifications
+         * with the helper methods
          *
-         * @param libraryModification an HashMap identified by libraryID containing an HashMap with the modifications identified by elementID.
+         * @param libraryModification
+         *         an HashMap identified by libraryID containing an HashMap with the modifications
+         *         identified by elementID.
+         *
          * @return this
          */
         public Builder withLibraryModification(HashMap<String, HashMap<String, String>> libraryModification) {
@@ -901,9 +981,13 @@ public class Libs {
         /**
          * Builder helper method to set modifications for specific libraries
          *
-         * @param library           the library to be modified
-         * @param modificationKey   the identifier for the specific modification
-         * @param modificationValue the value for the specific modification
+         * @param library
+         *         the library to be modified
+         * @param modificationKey
+         *         the identifier for the specific modification
+         * @param modificationValue
+         *         the value for the specific modification
+         *
          * @return this
          */
         public Builder withLibraryModification(String library, LibraryFields modificationKey, String modificationValue) {
@@ -933,7 +1017,9 @@ public class Libs {
         /**
          * builder to build an adapter out of the given information ;D
          *
-         * @param context the current context
+         * @param context
+         *         the current context
+         *
          * @return a LibsRecyclerViewAdapter with the libraries
          */
         public LibsRecyclerViewAdapter adapter(Context context) {

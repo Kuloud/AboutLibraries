@@ -1,18 +1,12 @@
 apply plugin: 'com.android.application'
-//wrap with try and catch so the build is working even if the signing stuff is missing
-try {
-    apply from: '../../../signing.gradle'
-} catch (ex) {
-}
-
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 24
     buildToolsVersion '21.1.2'
     defaultConfig {
         applicationId 'com.kuloud.android.aboutlibraries.sample'
         minSdkVersion 14
-        targetSdkVersion 21
+        targetSdkVersion 24
         versionCode 458
         versionName '4.5.8'
 
