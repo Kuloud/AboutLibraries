@@ -1,2 +1,2 @@
-include ':sample'
-include ':library'
+include ':sample', ':about', ':essentials'
+project(':essentials').projectDir = new File('../Essentials/essentials')

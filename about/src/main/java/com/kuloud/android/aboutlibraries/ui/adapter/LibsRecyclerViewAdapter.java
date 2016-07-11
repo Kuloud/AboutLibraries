@@ -11,16 +11,19 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.kuloud.android.aboutlibraries.R;
 import com.kuloud.android.aboutlibraries.entity.Library;
 import com.kuloud.android.aboutlibraries.util.MovementCheck;
-import com.kuloud.android.aboutlibraries.R;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import static com.kuloud.android.essential.BaseDefine.MIME_HTML_UTF_8;
 
 public class LibsRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int TYPE_HEADER = 0;
@@ -102,12 +105,7 @@ public class LibsRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
                 holder.aboutSpecial1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        try {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
-                            builder.setMessage(Html.fromHtml(aboutSpecial1Description));
-                            builder.create().show();
-                        } catch (Exception ex) {
-                        }
+                        showDialog(aboutSpecial1Description);
                     }
                 });
                 holder.aboutSpecialContainer.setVisibility(View.VISIBLE);
@@ -118,12 +116,7 @@ public class LibsRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
                 holder.aboutSpecial2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        try {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
-                            builder.setMessage(Html.fromHtml(aboutSpecial2Description));
-                            builder.create().show();
-                        } catch (Exception ex) {
-                        }
+                        showDialog(aboutSpecial2Description);
                     }
                 });
                 holder.aboutSpecialContainer.setVisibility(View.VISIBLE);
@@ -134,12 +127,7 @@ public class LibsRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
                 holder.aboutSpecial3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        try {
-                            AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
-                            builder.setMessage(Html.fromHtml(aboutSpecial3Description));
-                            builder.create().show();
-                        } catch (Exception ex) {
-                        }
+                        showDialog(aboutSpecial3Description);
                     }
                 });
                 holder.aboutSpecialContainer.setVisibility(View.VISIBLE);
@@ -256,6 +244,18 @@ public class LibsRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
             } else {
                 holder.libraryBottomContainer.setOnClickListener(null);
             }
+        }
+    }
+
+    private void showDialog(String description) {
+        try {
+            AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
+            WebView webView = new WebView(ctx);
+            webView.loadData(description, MIME_HTML_UTF_8, null);
+
+            builder.setView(webView);
+            builder.create().show();
+        } catch (Exception ex) {
         }
     }
 

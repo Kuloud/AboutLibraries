@@ -50,17 +50,14 @@ public class FragmentActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == com.kuloud.android.aboutlibraries.sample.R.id.action_opensource) {
+        if (id == R.id.action_opensource) {
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/mikepenz/AboutLibraries"));
             startActivity(browserIntent);
             return true;
-        } else if (id == com.kuloud.android.aboutlibraries.sample.R.id.action_extendactivity) {
+        } else if (id == R.id.action_extendactivity) {
             Intent i = new Intent(getApplicationContext(), ExtendActivity.class);
             startActivity(i);
-        } else if (id == com.kuloud.android.aboutlibraries.sample.R.id.action_customactivity) {
-            Intent i = new Intent(getApplicationContext(), CustomActivity.class);
-            startActivity(i);
-        } else if (id == com.kuloud.android.aboutlibraries.sample.R.id.action_manifestactivity) {
+        } else if (id == R.id.action_manifestactivity) {
             new Libs.Builder()
                     .withFields(R.string.class.getFields())
                     .withLibraries("crouton, actionbarsherlock", "showcaseview")

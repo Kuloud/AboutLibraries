@@ -78,9 +78,9 @@ public class Libs {
 
     private Context ctx;
 
-    private ArrayList<Library> internLibraries = new ArrayList<Library>();
-    private ArrayList<Library> externLibraries = new ArrayList<Library>();
-    private ArrayList<License> licenses = new ArrayList<License>();
+    private ArrayList<Library> internLibraries = new ArrayList<>();
+    private ArrayList<Library> externLibraries = new ArrayList<>();
+    private ArrayList<License> licenses = new ArrayList<>();
 
     public Libs(Context context) {
         ctx = context;
@@ -367,7 +367,7 @@ public class Libs {
      * @return
      */
     private ArrayList<Library> find(ArrayList<Library> libraries, String searchTerm, boolean idOnly, int limit) {
-        ArrayList<Library> localLibs = new ArrayList<Library>();
+        ArrayList<Library> localLibs = new ArrayList<>();
 
         int count = 0;
         for (Library library : libraries) {
